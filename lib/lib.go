@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"net/http"
 	"regexp"
-)
+)                     
 
-func ValidateUserInput (oldCurrencyCode string, oldCurrency float64, newCurrencyCode string ) (bool, bool, bool) {
+func ValidateUserInput (oldCurrencyCode string, oldCurrency float64, newCurrencyCode string) (bool, bool, bool) {
 	isOldCurrencyCodeValid, _ :=  regexp.MatchString("^[A-Z]{3}$", oldCurrencyCode) 
 	isOldCurrencyValid :=  oldCurrency > 0
 	isNewCurrencyCodeValid, _ :=  regexp.MatchString("^[A-Z]{3}$", newCurrencyCode)
